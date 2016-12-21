@@ -8,7 +8,7 @@ namespace izsu_opp
 {
     public class abone
     {
-        public string aboneno;
+        public int aboneno;
         public string adsoyad;
         public int ilkdurum;
         public int sondurum;
@@ -16,7 +16,7 @@ namespace izsu_opp
 
         public double odemeyap(double ilk, double son, string abonetürü)
         {
-            double result = 0;
+            double result;
             if (abonetürü=="ev")
             {
                 result = (son - ilk) * 0.3;
@@ -38,7 +38,7 @@ namespace izsu_opp
 
         public override string ToString()
         {
-          return  this.aboneno;
+          return  this.aboneno.ToString();
         }
     }
 }

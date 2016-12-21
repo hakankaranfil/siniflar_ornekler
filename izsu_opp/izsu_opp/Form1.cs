@@ -20,13 +20,20 @@ namespace izsu_opp
         private void btnkaydet_Click(object sender, EventArgs e)
         {
             abone müsteri = new abone();
-            müsteri.aboneno = txtaboneno.Text;
+            müsteri.aboneno = Convert.ToInt32(txtaboneno.Text);
             müsteri.adsoyad = txtisim.Text;
             müsteri.ilkdurum =Convert.ToInt32( txtilk.Text);
             müsteri.sondurum = Convert.ToInt32(txtson.Text);
             string abonetürü = radioev.Checked == true ? "ev":"kurum";
             müsteri.ödemetürü = abonetürü;
             listBox1.Items.Add(müsteri);
+
+
+          
+           
+
+
+       
 
         }
 
