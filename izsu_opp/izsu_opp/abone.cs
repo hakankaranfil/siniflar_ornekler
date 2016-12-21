@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace izsu_opp
 {
-    class abone
+    public class abone
     {
         public string aboneno;
         public string adsoyad;

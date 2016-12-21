@@ -35,6 +35,12 @@ namespace izsu_opp
             abone müsteri = (abone)listBox1.SelectedItem;
             double ödeme = müsteri.odemeyap(müsteri.ilkdurum, müsteri.sondurum,müsteri.ödemetürü );
             DialogResult result = MessageBox.Show("Ödeme Tutarı: " + ödeme + "\nÖdeme Yapmak İstiyor Musunu?", "Ödeme Ekranı", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                Form2 frm = new Form2(müsteri);
+                frm.Show();
+
+            }
 
         }
     }
