@@ -40,7 +40,7 @@ namespace izsu_opp
         private void listBox1_DoubleClick(object sender, EventArgs e)
         {
             abone müsteri = (abone)listBox1.SelectedItem;
-            double ödeme = müsteri.odemeyap(müsteri.ilkdurum, müsteri.sondurum,müsteri.ödemetürü );
+            double ödeme = müsteri.odemeyap(müsteri.ilkdurum, müsteri.sondurum, müsteri.ödemetürü);
             DialogResult result = MessageBox.Show("Ödeme Tutarı: " + ödeme + "\nÖdeme Yapmak İstiyor Musunu?", "Ödeme Ekranı", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
@@ -49,6 +49,10 @@ namespace izsu_opp
 
             }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
         }
     }
-}
+    }
+

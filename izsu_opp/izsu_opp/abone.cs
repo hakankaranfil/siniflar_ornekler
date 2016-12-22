@@ -38,7 +38,7 @@ namespace izsu_opp
 
         public override string ToString()
         {
-          return  this.aboneno.ToString();
+            return this.aboneno + " " + this.adsoyad;
         }
     }
 }
