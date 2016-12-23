@@ -25,11 +25,15 @@ namespace izsu_opp
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnödeme_Click(object sender, EventArgs e)
         {
-             
-            Form3 frm = new Form3();
-            frm.Show();
+            abone ödeme = new abone();
+            ödeme.güncelborc = 0;
+            
+            Form1 frm = new Form1();
+            frm.deger.Add(ödeme);
+          
+            
         }
     }
 }

@@ -41,17 +41,16 @@
             this.txtson = new System.Windows.Forms.TextBox();
             this.btnkaydet = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(9, 32);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(12, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 20);
+            this.label1.Size = new System.Drawing.Size(103, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Abone no:";
             // 
@@ -59,37 +58,36 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(8, 77);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(11, 95);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 20);
+            this.label2.Size = new System.Drawing.Size(104, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Adısoyadı:";
             // 
             // txtaboneno
             // 
-            this.txtaboneno.Location = new System.Drawing.Point(103, 32);
-            this.txtaboneno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtaboneno.Location = new System.Drawing.Point(137, 39);
+            this.txtaboneno.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtaboneno.Name = "txtaboneno";
-            this.txtaboneno.Size = new System.Drawing.Size(76, 20);
+            this.txtaboneno.Size = new System.Drawing.Size(100, 22);
             this.txtaboneno.TabIndex = 2;
             // 
             // txtisim
             // 
-            this.txtisim.Location = new System.Drawing.Point(103, 77);
-            this.txtisim.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtisim.Location = new System.Drawing.Point(137, 95);
+            this.txtisim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtisim.Name = "txtisim";
-            this.txtisim.Size = new System.Drawing.Size(76, 20);
+            this.txtisim.Size = new System.Drawing.Size(100, 22);
             this.txtisim.TabIndex = 3;
             // 
             // radioev
             // 
             this.radioev.AutoSize = true;
             this.radioev.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioev.Location = new System.Drawing.Point(103, 129);
-            this.radioev.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radioev.Location = new System.Drawing.Point(137, 159);
+            this.radioev.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioev.Name = "radioev";
-            this.radioev.Size = new System.Drawing.Size(43, 24);
+            this.radioev.Size = new System.Drawing.Size(54, 29);
             this.radioev.TabIndex = 4;
             this.radioev.TabStop = true;
             this.radioev.Text = "ev";
@@ -99,10 +97,10 @@
             // 
             this.radiosirket.AutoSize = true;
             this.radiosirket.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radiosirket.Location = new System.Drawing.Point(155, 129);
-            this.radiosirket.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.radiosirket.Location = new System.Drawing.Point(207, 159);
+            this.radiosirket.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radiosirket.Name = "radiosirket";
-            this.radiosirket.Size = new System.Drawing.Size(65, 24);
+            this.radiosirket.Size = new System.Drawing.Size(79, 29);
             this.radiosirket.TabIndex = 5;
             this.radiosirket.TabStop = true;
             this.radiosirket.Text = "şirket";
@@ -112,10 +110,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(9, 131);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(12, 161);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 20);
+            this.label3.Size = new System.Drawing.Size(97, 25);
             this.label3.TabIndex = 6;
             this.label3.Text = "Şirket tipi:";
             // 
@@ -123,10 +120,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(14, 174);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(19, 214);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(27, 20);
+            this.label4.Size = new System.Drawing.Size(36, 25);
             this.label4.TabIndex = 7;
             this.label4.Text = "ilk:";
             // 
@@ -134,35 +130,34 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(14, 218);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(19, 268);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 20);
+            this.label5.Size = new System.Drawing.Size(50, 25);
             this.label5.TabIndex = 8;
             this.label5.Text = "son:";
             // 
             // txtilk
             // 
-            this.txtilk.Location = new System.Drawing.Point(68, 174);
-            this.txtilk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtilk.Location = new System.Drawing.Point(91, 214);
+            this.txtilk.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtilk.Name = "txtilk";
-            this.txtilk.Size = new System.Drawing.Size(76, 20);
+            this.txtilk.Size = new System.Drawing.Size(100, 22);
             this.txtilk.TabIndex = 9;
             // 
             // txtson
             // 
-            this.txtson.Location = new System.Drawing.Point(68, 218);
-            this.txtson.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtson.Location = new System.Drawing.Point(91, 268);
+            this.txtson.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtson.Name = "txtson";
-            this.txtson.Size = new System.Drawing.Size(76, 20);
+            this.txtson.Size = new System.Drawing.Size(100, 22);
             this.txtson.TabIndex = 10;
             // 
             // btnkaydet
             // 
-            this.btnkaydet.Location = new System.Drawing.Point(170, 212);
-            this.btnkaydet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnkaydet.Location = new System.Drawing.Point(227, 261);
+            this.btnkaydet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnkaydet.Name = "btnkaydet";
-            this.btnkaydet.Size = new System.Drawing.Size(63, 29);
+            this.btnkaydet.Size = new System.Drawing.Size(84, 36);
             this.btnkaydet.TabIndex = 11;
             this.btnkaydet.Text = "kaydet";
             this.btnkaydet.UseVisualStyleBackColor = true;
@@ -171,30 +166,30 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(2, 278);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(3, 342);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(162, 186);
+            this.listBox1.Size = new System.Drawing.Size(249, 228);
             this.listBox1.TabIndex = 12;
             this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
             // 
-            // button1
+            // listBox2
             // 
-            this.button1.Location = new System.Drawing.Point(249, 212);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(63, 29);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "öde";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 16;
+            this.listBox2.Location = new System.Drawing.Point(258, 343);
+            this.listBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(249, 228);
+            this.listBox2.TabIndex = 13;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 473);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(533, 582);
+            this.Controls.Add(this.listBox2);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnkaydet);
             this.Controls.Add(this.txtson);
@@ -208,7 +203,7 @@
             this.Controls.Add(this.txtaboneno);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -231,7 +226,7 @@
         private System.Windows.Forms.TextBox txtson;
         private System.Windows.Forms.Button btnkaydet;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListBox listBox2;
     }
 }
 

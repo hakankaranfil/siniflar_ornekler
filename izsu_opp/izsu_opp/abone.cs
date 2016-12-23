@@ -13,6 +13,7 @@ namespace izsu_opp
         public int ilkdurum;
         public int sondurum;
         public string ödemetürü;
+        public double güncelborc;
 
         public double odemeyap(double ilk, double son, string abonetürü)
         {

@@ -16,24 +16,24 @@ namespace izsu_opp
         {
             InitializeComponent();
         }
-
+        public List<abone> deger = new List<abone>();
         private void btnkaydet_Click(object sender, EventArgs e)
         {
             abone müsteri = new abone();
             müsteri.aboneno = Convert.ToInt32(txtaboneno.Text);
             müsteri.adsoyad = txtisim.Text;
-            müsteri.ilkdurum =Convert.ToInt32( txtilk.Text);
+            müsteri.ilkdurum = Convert.ToInt32(txtilk.Text);
             müsteri.sondurum = Convert.ToInt32(txtson.Text);
-            string abonetürü = radioev.Checked == true ? "ev":"kurum";
+            string abonetürü = radioev.Checked == true ? "ev" : "kurum";
             müsteri.ödemetürü = abonetürü;
             listBox1.Items.Add(müsteri);
 
 
-          
-           
 
 
-       
+
+
+
 
         }
 
@@ -41,18 +41,24 @@ namespace izsu_opp
         {
             abone müsteri = (abone)listBox1.SelectedItem;
             double ödeme = müsteri.odemeyap(müsteri.ilkdurum, müsteri.sondurum, müsteri.ödemetürü);
-            DialogResult result = MessageBox.Show("Ödeme Tutarı: " + ödeme + "\nÖdeme Yapmak İstiyor Musunu?", "Ödeme Ekranı", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
+            DialogResult result = MessageBox.Show("Ödeme Tutarı: " + ödeme + "\nÖdeme ekranına aktarılıyorsunuz", "Ödeme Ekranı", MessageBoxButtons.OKCancel);
+            müsteri.güncelborc = ödeme;
+            if (result == DialogResult.OK)
             {
+                listBox2.Items.Add(deger);
                 Form2 frm = new Form2(müsteri);
                 frm.Show();
-
+                
             }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-           
+
+            
+
+
         }
+        }
+
+    
     }
-    }
+    
 
