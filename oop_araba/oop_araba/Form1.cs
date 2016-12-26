@@ -24,13 +24,23 @@ namespace oop_araba
          int lttüketim = Convert.ToInt32(numericortalamatüketim100km.Value);
 
             araba a = new araba(yakıkapasite,lttüketim);
-            MessageBox.Show (a.toplamyol.ToString());
+            
 
 
 
             
           
             MessageBox.Show(a.yakıtdepokapasite + "" + "\n" + a.ortalamatüketim + "" + "\n"+a.toplamyol);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int yakıkapasite = Convert.ToInt32(numericyakitkapasite.Value);
+            int lttüketim = Convert.ToInt32(numericortalamatüketim100km.Value);
+
+            araba a = new araba(yakıkapasite, lttüketim);
+            double km = Convert.ToDouble(numericUpDown4.Value);
+            MessageBox.Show(a.ücrethesaplama(km).ToString());
         }
     }
 }
