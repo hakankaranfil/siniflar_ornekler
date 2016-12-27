@@ -137,7 +137,7 @@
             this.listBox1.ItemHeight = 16;
             this.listBox1.Location = new System.Drawing.Point(292, 12);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(317, 212);
+            this.listBox1.Size = new System.Drawing.Size(282, 356);
             this.listBox1.TabIndex = 9;
             this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
             // 
@@ -155,7 +155,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(693, 426);
+            this.ClientSize = new System.Drawing.Size(578, 470);
             this.Controls.Add(this.btngüncelle);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnekle);

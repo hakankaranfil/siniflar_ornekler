@@ -57,7 +57,11 @@ namespace opp_insankaynakları
            satıstemsilcisi st = (satıstemsilcisi)listBox1.SelectedItem;
 
             int satisAdeti = Convert.ToInt32(numericsatısadet.Value);
-            numericmaas.Value = Convert.ToDecimal(st.zamyap(satisAdeti));
+            numericmaas.Value =Convert.ToInt32(st.zamyap(satisAdeti));
+            listBox1.Items.Clear();
+            listBox1.Items.Add("ssk no="+ " " + st.sskno+" "+"güncel maaş=" +" "+ numericmaas.Value);
+
+
         }
     }
 }

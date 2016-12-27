@@ -13,13 +13,13 @@ namespace opp_insankaynakları
         public string elementürü { get; set; }
         public override string ToString()
         {
-            return string.Format("ssk no:{0} maas:{1}", sskno, maas);
+            return string.Format("ssk no:{0} maas:{1} ", sskno, maas);
         }
         public virtual double zamyap(double satis)
         {
             //double ekMaas = satis * 10;
             //return maas + ekMaas;
-            return maas;
+            return Convert.ToDouble("a ");
 
 
         }
