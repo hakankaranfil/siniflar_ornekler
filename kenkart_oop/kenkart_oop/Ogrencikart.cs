@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace kenkart_oop
 {
-    class Ogrencikart:Kart
+    class Ogrencikart : Kart
     {
         class OgrenciKart : Kart
         {
@@ -24,4 +24,5 @@ namespace kenkart_oop
                 return this.kartID + "\t" + this.bakiye + "\t" + this.okulAdi + "\t" + this.kartTuru;
             }
         }
+    }
 }
