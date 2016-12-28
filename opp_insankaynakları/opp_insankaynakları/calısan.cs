@@ -9,15 +9,19 @@ namespace opp_insankaynakları
     class calısan
     {
         public int sskno { get; set; }
-        public double maas { get; set; }
+        public static double maas { get; set; }
+        public string elementürü { get; set; }
         public override string ToString()
         {
-            return string.Format("ssk no:{0} maas:{1}", sskno, maas);
+            return string.Format("ssk no:{0} maas:{1} ", sskno, maas);
         }
-        public virtual double zamyap(double ekmaas)
+        public virtual double zamyap(double satis)
         {
-            return maas + ekmaas;
-            "kespt"
+            //double ekMaas = satis * 10;
+            //return maas + ekMaas;
+            return Convert.ToDouble("a ");
+
+
         }
     }
 }
