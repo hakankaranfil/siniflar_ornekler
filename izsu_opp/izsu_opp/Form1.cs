@@ -16,7 +16,11 @@ namespace izsu_opp
         {
             InitializeComponent();
         }
-        public List<abone> deger = new List<abone>();
+        public Form1(abone gelen)
+        {
+            InitializeComponent();
+        }
+       static List<abone> deger = new List<abone>();
         private void btnkaydet_Click(object sender, EventArgs e)
         {
             abone müsteri = new abone();
@@ -27,6 +31,7 @@ namespace izsu_opp
             string abonetürü = radioev.Checked == true ? "ev" : "kurum";
             müsteri.ödemetürü = abonetürü;
             listBox1.Items.Add(müsteri);
+            deger.Add(müsteri);
 
 
 
@@ -56,7 +61,15 @@ namespace izsu_opp
 
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            foreach (var item in deger)
+            {
+                listBox1.Items.Add(item);
+            }
         }
+    }
 
     
     }
