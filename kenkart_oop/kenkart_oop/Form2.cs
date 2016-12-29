@@ -28,9 +28,9 @@ namespace kenkart_oop
         {
             gelenYolcu.bakiye += Convert.ToInt32(textBox1.Text);
 
-            Form1 frm1 = new Form1();
+            Form1 frm1 = new Form1(gelenYolcu);
             frm1.Show();
-            frm1.bsnb.Add(gelenYolcu);
+          
             this.Hide();
             
             

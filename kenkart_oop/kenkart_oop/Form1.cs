@@ -12,7 +12,7 @@ namespace kenkart_oop
 {
     public partial class Form1 : Form
     {
-        Kart gelenYolcu = new Kart();
+        
         public Form1()
         {
             InitializeComponent();
@@ -21,15 +21,16 @@ namespace kenkart_oop
 
 
         }
-        public Form1(Kart hakan)
+        public Form1(Kart yolcu)
         {
             InitializeComponent();
+ 
 
 
 
 
         }
-        public List<Kart> bsnb = new List<Kart>();
+        static List<Kart> kalıcı = new List<Kart>();
 
         Ogrencikart ogrenci = new Ogrencikart();
         Ogretmenkart ogretmen = new Ogretmenkart();
@@ -38,12 +39,9 @@ namespace kenkart_oop
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            if (bsnb.Count != 0)
+            foreach (var item in kalıcı)
             {
-                foreach (var item in bsnb)
-                {
-                    listBox1.Items.Add(item);
-                }
+                listBox1.Items.Add(item);
             }
         }
 
@@ -57,7 +55,7 @@ namespace kenkart_oop
 
                 ogrenci.kartTuru = YolcuTipi.Ogrenci;
                 listBox1.Items.Add(ogrenci);
-                bsnb.Add(ogrenci);
+               kalıcı.Add(ogrenci);
             }
             else if (radioogretmen.Checked == true)
             {
@@ -66,7 +64,7 @@ namespace kenkart_oop
                 kartid++;
                 ogretmen.kartTuru = YolcuTipi.Ogretmen;
                 listBox1.Items.Add(ogretmen);
-                bsnb.Add(ogretmen);
+              kalıcı.Add(ogretmen);
 
             }
             else
@@ -76,7 +74,7 @@ namespace kenkart_oop
                 kartid++;
                 tam.kartTuru = YolcuTipi.Tam;
                 listBox1.Items.Add(tam);
-                bsnb.Add(tam);
+               kalıcı.Add(tam);
             }
         }
 
