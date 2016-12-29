@@ -13,6 +13,7 @@ namespace oop_arabakira
 
         public string yakıttüketim { get; set; }
         public int ucret { get; set; }
+        public int guncelborc { get; set; }
 
         public int hesapla(int gunsayisi)
         {
