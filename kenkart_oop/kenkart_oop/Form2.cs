@@ -18,19 +18,19 @@ namespace kenkart_oop
             
             InitializeComponent();
             
-            if (yolcu != null)
-            {
+            //if (yolcu != null)
+            //{
                 gelenYolcu = yolcu;
-            }
+            //}
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             gelenYolcu.bakiye += Convert.ToInt32(textBox1.Text);
 
-            Form1 frm1 = new Form1();
+            Form1 frm1 = new Form1(gelenYolcu);
             frm1.Show();
-            frm1.bsnb.Add(gelenYolcu);
+          
             this.Hide();
             
             
