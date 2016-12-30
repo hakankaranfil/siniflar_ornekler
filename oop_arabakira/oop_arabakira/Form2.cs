@@ -12,9 +12,15 @@ namespace oop_arabakira
 {
     public partial class Form2 : Form
     {
-        public Form2()
+
+        public Form2(arabakira müsteri)
         {
             InitializeComponent();
+        }
+
+        private void txtgün_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

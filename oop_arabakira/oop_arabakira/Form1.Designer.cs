@@ -31,9 +31,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtgün = new System.Windows.Forms.TextBox();
-            this.btnhesapla = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -64,48 +61,18 @@
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(12, 103);
+            this.listBox1.Location = new System.Drawing.Point(-4, 97);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(469, 292);
             this.listBox1.TabIndex = 2;
             this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(402, 47);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(204, 25);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "kiralanacak günsayısı:";
-            // 
-            // txtgün
-            // 
-            this.txtgün.Location = new System.Drawing.Point(642, 50);
-            this.txtgün.Name = "txtgün";
-            this.txtgün.Size = new System.Drawing.Size(183, 22);
-            this.txtgün.TabIndex = 4;
-            // 
-            // btnhesapla
-            // 
-            this.btnhesapla.Location = new System.Drawing.Point(516, 118);
-            this.btnhesapla.Name = "btnhesapla";
-            this.btnhesapla.Size = new System.Drawing.Size(111, 41);
-            this.btnhesapla.TabIndex = 5;
-            this.btnhesapla.Text = "hesapla";
-            this.btnhesapla.UseVisualStyleBackColor = true;
-            this.btnhesapla.Click += new System.EventHandler(this.btnhesapla_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1232, 591);
-            this.Controls.Add(this.btnhesapla);
-            this.Controls.Add(this.txtgün);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(475, 397);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
@@ -122,9 +89,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtgün;
-        private System.Windows.Forms.Button btnhesapla;
     }
 }
 

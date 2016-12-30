@@ -32,25 +32,29 @@ namespace oop_arabakira
             
             if (comboBox1.SelectedItem.ToString() == "fiat")
             {
+
+
+                _fiat.secim = arabatipi.fiat;
+                listBox1.Items.Add("marka=" + _fiat.marka + " " + "model=" + _fiat.model + " " + "yakıt tüketim=" + _fiat.yakıttüketim + " " + "günlük=" + _fiat.gunluk);
                 
-
-
-                listBox1.Items.Add("marka=" + _fiat.marka + " " + "model=" + _fiat.model + " " + "yakıt tüketim=" + _fiat.yakıttüketim + " " + "ücret=" + "");
                
                 
             }
             else if (comboBox1.SelectedItem.ToString() == "honda")
             {
-                listBox1.Items.Add("marka="+ _honda.marka + " "+"model=" + _honda.model + " " +"yakıt tüketim="+ _honda.yakıttüketim + " " +"ücret="+"");
+                listBox1.Items.Add("marka="+ _honda.marka + " "+"model=" + _honda.model + " " +"yakıt tüketim="+ _honda.yakıttüketim + " " +"günlük="+_honda.gunluk);
+                _honda.secim = arabatipi.honda;
             
             }
             else if (comboBox1.SelectedItem.ToString() == "mercedes")
             {
-                listBox1.Items.Add("marka=" + _mercedes.marka + " " + "model=" + _mercedes.model + " " + "yakıt tüketim=" + _mercedes.yakıttüketim + " " + "ücret=" + kira.guncelborc);
+                listBox1.Items.Add("marka=" + _mercedes.marka + " " + "model=" + _mercedes.model + " " + "yakıt tüketim=" + _mercedes.yakıttüketim + " " + "günlük=" + _mercedes.gunluk);
+                _mercedes.secim = arabatipi.mercedes;
             }
             else
             {
-                listBox1.Items.Add("marka=" + _bmw.marka + " " + "model=" + _bmw.model + " " + "yakıt tüketim=" + _bmw.yakıttüketim + " " + "ücret=" + kira.guncelborc);
+                listBox1.Items.Add("marka=" + _bmw.marka + " " + "model=" + _bmw.model + " " + "yakıt tüketim=" + _bmw.yakıttüketim + " " + "günlük=" + _bmw.gunluk);
+                _bmw.secim = arabatipi.mercedes;
             }
         }
 
@@ -62,7 +66,46 @@ namespace oop_arabakira
 
         private void listBox1_DoubleClick(object sender, EventArgs e)
         {
-            //DialogResult result = MessageBox.Show("Ödeme Tutarı: " + + "\nÖdeme Yapmak İstiyor Musunu?", "Ödeme Ekranı", MessageBoxButtons.YesNo);
+            arabakira kira = (arabakira)listBox1.SelectedItem;
+            DialogResult result = MessageBox.Show("Bilgi ekranına akratılıyorsunuz?", "Bildirim Ekranı", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                Form2 frm2 = new Form2(kira);
+                frm2.Show();
+                this.Hide();
+            }
+            if (kira.secim == arabatipi.fiat)
+
+            {
+                listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+                _fiat = (fiat)kira;
+                listBox1.Items.Add(_fiat);
+            }
+            else if (kira.secim == arabatipi.honda)
+            {
+                listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+                _honda = (honda)kira;
+                listBox1.Items.Add(_honda);
+            }
+            else if (kira.secim == arabatipi.mercedes)
+            {
+                listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+                _mercedes = (mercedes)kira;
+                listBox1.Items.Add(_mercedes);
+            }
+            else
+            {
+                listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+                _bmw = (bmw)kira;
+                listBox1.Items.Add(_bmw);
+
+            }
+     
+
+
+
+
+
 
         }
 

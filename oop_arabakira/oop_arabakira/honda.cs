@@ -6,15 +6,20 @@ using System.Threading.Tasks;
 
 namespace oop_arabakira
 {
-    class honda:arabakira
+  public  class honda:arabakira
     {
         public honda()
         {
             marka = "honda";
             model = "civic";
             yakıttüketim = "40 kuruş";
-            ucret = 200;
+            gunluk = 200;
         }
-       
+        public override int hesapla(int gunsayısı)
+        {
+            ucret = 200 * gunsayısı;
+            return ucret;
+        }
+
     }
 }

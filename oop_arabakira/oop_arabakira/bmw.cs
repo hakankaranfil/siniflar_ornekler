@@ -13,7 +13,12 @@ namespace oop_arabakira
             marka = "bmw";
             model = "m5";
             yakıttüketim = "55kurus";
-            ucret = 400;
+            gunluk= 400;
+        }
+        public override int hesapla(int gunsayısı)
+        {
+            ucret = 400 * gunsayısı;
+            return ucret;
         }
     }
 }

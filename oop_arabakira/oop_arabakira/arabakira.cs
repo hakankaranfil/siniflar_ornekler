@@ -6,25 +6,43 @@ using System.Threading.Tasks;
 
 namespace oop_arabakira
 {
-    class arabakira
+    public enum arabatipi
     {
+        fiat,
+        honda,
+        mercedes,
+        bmw
+    };
+   public class arabakira
+    {
+        public string adsoyad { get; set; }
+        public int tckimlik { get; set; }
         public string marka { get; set; }
        public string model { get; set; }
 
         public string yakıttüketim { get; set; }
         public int ucret { get; set; }
         public int guncelborc { get; set; }
+        public int gunluk { get; set; }
 
-        public int hesapla(int gunsayisi)
+        //public int hesapla(int gunsayisi)
+        //{
+        //    int sonuc = gunsayisi * ucret;
+        //    return sonuc;
+
+        public virtual int hesapla(int gunsayısı)
         {
-            int sonuc = gunsayisi * ucret;
-            return sonuc;
-
+            return gunsayısı;
         }
+        public arabatipi secim { get; set; }
+
         public override string ToString()
         {
-            return string.Format("marka: {0} Model: {1} yakıt tüketimi: {2} ucret: {3}", marka, model, yakıttüketim, ucret);
+         return   this.marka + this.model + this.yakıttüketim + this.ucret+this.secim;
         }
+    }
+       
+      
 
     }
-}
+

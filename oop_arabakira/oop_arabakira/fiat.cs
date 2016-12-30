@@ -6,16 +6,23 @@ using System.Threading.Tasks;
 
 namespace oop_arabakira
 {
-    class fiat:arabakira
+  public  class fiat:arabakira
     {
         public fiat()
         {
             marka = "fiat";
             model = "albea";
             yakıttüketim = "30 kuruş";
-            ucret = 100;
+            gunluk = 100;
 
             
+
+            
+        }
+        public override int hesapla(int gunsayısı)
+        {
+            ucret = 100 * gunsayısı;
+            return ucret;
         }
     }
 }
