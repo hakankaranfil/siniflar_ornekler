@@ -38,7 +38,7 @@ namespace oop_arabakira
 
         public override string ToString()
         {
-         return   this.marka + this.model + this.yakıttüketim + this.ucret+this.secim;
+         return   this.marka + " " + this.model + " " + this.yakıttüketim + " " + this.ucret + " " + this.secim;
         }
     }
        

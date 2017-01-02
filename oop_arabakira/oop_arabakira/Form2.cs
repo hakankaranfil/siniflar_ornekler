@@ -12,10 +12,14 @@ namespace oop_arabakira
 {
     public partial class Form2 : Form
     {
-
-        public Form2(arabakira müsteri)
+        
+        public Form2(arabakira gelenmüsteri)
         {
             InitializeComponent();
+            gelenmüsteri.adsoyad = txtadsoyad.Text;
+            gelenmüsteri.tckimlik = int.Parse(tckimlik.Text);
+            gelenmüsteri.gunluk = int.Parse(txtgün.Text);
+            gelenmüsteri.ucret = int.Parse( txtücret.Text);
         }
 
         private void txtgün_TextChanged(object sender, EventArgs e)
