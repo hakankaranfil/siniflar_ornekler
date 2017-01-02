@@ -12,19 +12,33 @@ namespace oop_arabakira
 {
     public partial class Form2 : Form
     {
-        
+        arabakira araba2 = new arabakira();
         public Form2(arabakira gelenmüsteri)
         {
             InitializeComponent();
-            gelenmüsteri.adsoyad = txtadsoyad.Text;
-            gelenmüsteri.tckimlik = int.Parse(tckimlik.Text);
-            gelenmüsteri.gunluk = int.Parse(txtgün.Text);
-            gelenmüsteri.ucret = int.Parse( txtücret.Text);
+            txtücret.Text = gelenmüsteri.ucret.ToString();
+            txtgün.Text = gelenmüsteri.gunluk.ToString();
+            araba2 = gelenmüsteri;
         }
 
         private void txtgün_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnhesapla_Click(object sender, EventArgs e)
+        {
+            araba2.adsoyad = txtadsoyad.Text;
+            araba2.tckimlik =int.Parse( txtkimlik.Text);
+           //araba2.gunluk = int.Parse(txtgün.Text);
+            araba2.ucret = int.Parse(txtücret.Text);
+       
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            txtgün.Enabled = false;
+            txtücret.Enabled = false;
         }
     }
 }

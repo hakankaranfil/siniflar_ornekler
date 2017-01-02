@@ -36,17 +36,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtücret = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.tckimlik = new System.Windows.Forms.TextBox();
+            this.txtkimlik = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnhesapla
             // 
-            this.btnhesapla.Location = new System.Drawing.Point(137, 284);
+            this.btnhesapla.Location = new System.Drawing.Point(12, 282);
             this.btnhesapla.Name = "btnhesapla";
             this.btnhesapla.Size = new System.Drawing.Size(132, 57);
             this.btnhesapla.TabIndex = 8;
             this.btnhesapla.Text = "hesapla";
             this.btnhesapla.UseVisualStyleBackColor = true;
+            this.btnhesapla.Click += new System.EventHandler(this.btnhesapla_Click);
             // 
             // txtgün
             // 
@@ -110,12 +111,12 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "TCKİMLİK:";
             // 
-            // tckimlik
+            // txtkimlik
             // 
-            this.tckimlik.Location = new System.Drawing.Point(224, 93);
-            this.tckimlik.Name = "tckimlik";
-            this.tckimlik.Size = new System.Drawing.Size(183, 22);
-            this.tckimlik.TabIndex = 14;
+            this.txtkimlik.Location = new System.Drawing.Point(224, 93);
+            this.txtkimlik.Name = "txtkimlik";
+            this.txtkimlik.Size = new System.Drawing.Size(183, 22);
+            this.txtkimlik.TabIndex = 14;
             // 
             // Form2
             // 
@@ -123,7 +124,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(446, 434);
-            this.Controls.Add(this.tckimlik);
+            this.Controls.Add(this.txtkimlik);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtücret);
             this.Controls.Add(this.label3);
@@ -134,6 +135,7 @@
             this.Controls.Add(this.label2);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,6 +151,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtücret;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tckimlik;
+        private System.Windows.Forms.TextBox txtkimlik;
     }
 }

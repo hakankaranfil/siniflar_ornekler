@@ -17,7 +17,8 @@ namespace oop_arabakira
             InitializeComponent();
             
         }
-        
+
+      public  int gun;
         arabakira kira = new arabakira();
         fiat _fiat = new fiat();
         honda _honda = new honda();
@@ -76,35 +77,43 @@ namespace oop_arabakira
 
         private void listBox1_DoubleClick(object sender, EventArgs e)
         {
+          
             arabakira kira = (arabakira)listBox1.SelectedItem;
+            gun = int.Parse(textBox1.Text);
 
             if (kira.secim == arabatipi.fiat)
 
             {
+                
                 listBox1.Items.RemoveAt(listBox1.SelectedIndex);
                 _fiat = (fiat)kira;
+                _fiat.ucret = _fiat.hesapla(gun);
                 listBox1.Items.Add(_fiat);
+                
             }
             else if (kira.secim == arabatipi.honda)
             {
                 listBox1.Items.RemoveAt(listBox1.SelectedIndex);
                 _honda = (honda)kira;
+                _honda.ucret = _honda.hesapla(gun);
                 listBox1.Items.Add(_honda);
             }
             else if (kira.secim == arabatipi.mercedes)
             {
                 listBox1.Items.RemoveAt(listBox1.SelectedIndex);
                 _mercedes = (mercedes)kira;
+                _mercedes.ucret = _mercedes.hesapla(gun);
                 listBox1.Items.Add(_mercedes);
             }
             else
             {
                 listBox1.Items.RemoveAt(listBox1.SelectedIndex);
                 _bmw = (bmw)kira;
+                _bmw.ucret = _bmw.hesapla(gun);
                 listBox1.Items.Add(_bmw);
 
             }
-
+            kira.gunluk = gun;
 
             DialogResult result = MessageBox.Show("Bilgi ekranına akratılıyorsunuz?", "Bildirim Ekranı", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
