@@ -41,11 +41,11 @@
             // 
             // btnhesapla
             // 
-            this.btnhesapla.Location = new System.Drawing.Point(12, 282);
+            this.btnhesapla.Location = new System.Drawing.Point(96, 261);
             this.btnhesapla.Name = "btnhesapla";
-            this.btnhesapla.Size = new System.Drawing.Size(132, 57);
+            this.btnhesapla.Size = new System.Drawing.Size(208, 69);
             this.btnhesapla.TabIndex = 8;
-            this.btnhesapla.Text = "hesapla";
+            this.btnhesapla.Text = "Kaydet";
             this.btnhesapla.UseVisualStyleBackColor = true;
             this.btnhesapla.Click += new System.EventHandler(this.btnhesapla_Click);
             // 

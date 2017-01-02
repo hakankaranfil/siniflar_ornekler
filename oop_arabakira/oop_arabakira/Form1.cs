@@ -12,13 +12,26 @@ namespace oop_arabakira
 {
     public partial class Form1 : Form
     {
+        
         public Form1()
         {
             InitializeComponent();
             
         }
+        
+        public Form1(arabakira gelen)
+        {
+            
+            
+            InitializeComponent();
+            
+            
+            
 
-      public  int gun;
+
+        }
+        
+        public  int gun;
         arabakira kira = new arabakira();
         fiat _fiat = new fiat();
         honda _honda = new honda();
@@ -60,13 +73,16 @@ namespace oop_arabakira
                 
                 _bmw.secim = arabatipi.mercedes;
                 listBox1.Items.Add(_bmw);
+                
             }
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //txtgün.Enabled = false;
-            //btnhesapla.Enabled = false;
+            //foreach (var item in )
+            //{
+
+            //}
         }
 
 

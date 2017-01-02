@@ -30,8 +30,12 @@ namespace oop_arabakira
         {
             araba2.adsoyad = txtadsoyad.Text;
             araba2.tckimlik =int.Parse( txtkimlik.Text);
-           //araba2.gunluk = int.Parse(txtgün.Text);
-            araba2.ucret = int.Parse(txtücret.Text);
+            Form1 frm = new Form1(araba2);
+            frm.Show();
+            this.Hide();
+
+           
+            
        
         }
 
