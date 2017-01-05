@@ -27,9 +27,15 @@ namespace oop_arabakira
             
             
             
+            
 
 
         }
+     public void temizle()
+        {
+            listBox1.Items.Clear();
+        }
+        static List<arabakira> kiralist = new List<arabakira>();
         
         public  int gun;
         arabakira kira = new arabakira();
@@ -51,6 +57,7 @@ namespace oop_arabakira
                 _fiat.secim = arabatipi.fiat;
                 
                 listBox1.Items.Add(_fiat);
+                kiralist.Add(_fiat);
                 
                
                 
@@ -60,29 +67,32 @@ namespace oop_arabakira
                
                 _honda.secim = arabatipi.honda;
                 listBox1.Items.Add(_honda);
-            
+                kiralist.Add(_honda);
+
+
             }
             else if (comboBox1.SelectedItem.ToString() == "mercedes")
             {
              
                 _mercedes.secim = arabatipi.mercedes;
                 listBox1.Items.Add(_mercedes);
+                kiralist.Add(_mercedes);
             }
             else
             {
                 
                 _bmw.secim = arabatipi.mercedes;
                 listBox1.Items.Add(_bmw);
-                
+                kiralist.Add(_bmw);
             }
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //foreach (var item in )
-            //{
-
-            //}
+            foreach (var item in kiralist)
+            {
+                listBox1.Items.Add(item);
+            }
         }
 
 
@@ -105,7 +115,8 @@ namespace oop_arabakira
                 _fiat = (fiat)kira;
                 _fiat.ucret = _fiat.hesapla(gun);
                 listBox1.Items.Add(_fiat);
-                
+                //kiralist.Add(_fiat);
+
             }
             else if (kira.secim == arabatipi.honda)
             {
@@ -113,6 +124,7 @@ namespace oop_arabakira
                 _honda = (honda)kira;
                 _honda.ucret = _honda.hesapla(gun);
                 listBox1.Items.Add(_honda);
+                //kiralist.Add(_honda);
             }
             else if (kira.secim == arabatipi.mercedes)
             {
@@ -120,6 +132,7 @@ namespace oop_arabakira
                 _mercedes = (mercedes)kira;
                 _mercedes.ucret = _mercedes.hesapla(gun);
                 listBox1.Items.Add(_mercedes);
+                //kiralist.Add(_honda);
             }
             else
             {
@@ -127,9 +140,12 @@ namespace oop_arabakira
                 _bmw = (bmw)kira;
                 _bmw.ucret = _bmw.hesapla(gun);
                 listBox1.Items.Add(_bmw);
+                //kiralist.Add(_bmw);
 
             }
             kira.gunluk = gun;
+            
+            
 
             DialogResult result = MessageBox.Show("Bilgi ekranına akratılıyorsunuz?", "Bildirim Ekranı", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
@@ -137,7 +153,9 @@ namespace oop_arabakira
                 Form2 frm2 = new Form2(kira);
                 frm2.Show();
                 this.Hide();
+                listBox1.Items.Clear();
             }
+           
         }
     }
 }
