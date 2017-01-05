@@ -10,6 +10,6 @@ namespace Kafesipariş
     {
         public int masano { get; set; }
 
-        public List<masa> siparislist = new List<masa>();
+        public List<siparis> siparislist = new List<siparis>();
     }
 }

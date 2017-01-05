@@ -8,9 +8,11 @@ namespace Kafesipariş
 {
     public class siparis : masa
     {
-        public List<siparis> yemekList = new List<siparis>();
-        public List<siparis> icecekList = new List<siparis>();
+        //public List<siparis> yemekList = new List<siparis>();
+        //public List<siparis> icecekList = new List<siparis>();
         public int ucret { get; set; }
+        public int yemekadet { get; set; }
+        public int icecekadet { get; set; }
 
         public string _yemekadi;
         public string yemekadi
@@ -87,10 +89,10 @@ namespace Kafesipariş
             }
         }
 
-        public override string ToString()
-        {
-            return this._yemekadi+this._icecekadi;
-        }
+        //public override string ToString()
+        //{
+        //    return"yemek adeti:"+ this.yemekadet+" "+ this._yemekadi+ "içeçek adeti:"+this.icecekadet+   this._icecekadi;
+        //}
        
 
 

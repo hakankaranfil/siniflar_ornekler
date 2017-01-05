@@ -38,15 +38,15 @@
             this.btnöde = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.comboicecek = new System.Windows.Forms.ComboBox();
             this.comboyemek = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.numericUpDownyemek = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownicecek = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownyemek)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownicecek)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -150,8 +150,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.numericUpDown2);
-            this.groupBox1.Controls.Add(this.numericUpDown1);
+            this.groupBox1.Controls.Add(this.numericUpDownicecek);
+            this.groupBox1.Controls.Add(this.numericUpDownyemek);
             this.groupBox1.Controls.Add(this.comboicecek);
             this.groupBox1.Controls.Add(this.comboyemek);
             this.groupBox1.Controls.Add(this.label2);
@@ -165,22 +165,6 @@
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Menü";
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Location = new System.Drawing.Point(288, 85);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(4);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(132, 26);
-            this.numericUpDown2.TabIndex = 5;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(288, 42);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(132, 26);
-            this.numericUpDown1.TabIndex = 4;
             // 
             // comboicecek
             // 
@@ -220,6 +204,22 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Yemek:";
             // 
+            // numericUpDownyemek
+            // 
+            this.numericUpDownyemek.Location = new System.Drawing.Point(288, 40);
+            this.numericUpDownyemek.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDownyemek.Name = "numericUpDownyemek";
+            this.numericUpDownyemek.Size = new System.Drawing.Size(132, 26);
+            this.numericUpDownyemek.TabIndex = 6;
+            // 
+            // numericUpDownicecek
+            // 
+            this.numericUpDownicecek.Location = new System.Drawing.Point(288, 85);
+            this.numericUpDownicecek.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDownicecek.Name = "numericUpDownicecek";
+            this.numericUpDownicecek.Size = new System.Drawing.Size(132, 26);
+            this.numericUpDownicecek.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -240,8 +240,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownyemek)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownicecek)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,12 +259,12 @@
         private System.Windows.Forms.Button btnöde;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.ComboBox comboicecek;
         private System.Windows.Forms.ComboBox comboyemek;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown numericUpDownyemek;
+        private System.Windows.Forms.NumericUpDown numericUpDownicecek;
     }
 }
 
