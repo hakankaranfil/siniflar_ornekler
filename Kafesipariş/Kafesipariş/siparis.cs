@@ -89,7 +89,7 @@ namespace Kafesipariş
 
         public override string ToString()
         {
-            return this._yemekadi;
+            return this._yemekadi+this._icecekadi;
         }
        
 

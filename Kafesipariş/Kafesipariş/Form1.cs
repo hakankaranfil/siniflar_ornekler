@@ -62,29 +62,47 @@ namespace Kafesipariş
 
 
             Button masa = sender as Button;
-            _masa.masano =Convert.ToInt32( masa.Text);
-            labelmasano.Text =_masa.masano.ToString();
+            //_masa.masano =Convert.ToInt32( masa.Text);
+            //labelmasano.Text =_masa.masano.ToString();
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            siparis _siparis = new siparis();
-
-            _siparis._yemekadi = comboyemek.SelectedItem.ToString();
-            _siparis.yemekList.Add(_siparis);
-            foreach (var item in _siparis.yemekList)
-            {
-                listBox1.Items.Add(item);
-                
-            }
             
-            _siparis._icecekadi = comboicecek.SelectedItem.ToString();
-            _siparis.icecekList.Add(_siparis);
-            foreach (var item in _siparis.icecekList)
+            siparis _siparis = new siparis();
+            try
             {
-                listBox1.Items.Add(item);
+                _siparis._yemekadi = comboyemek.SelectedItem.ToString();
+
+                _siparis.yemekList.Add(_siparis);
+                _siparis._icecekadi = comboicecek.SelectedItem.ToString();
+                _siparis.icecekList.Add(_siparis);
+                _masa.siparislist.Add(_siparis);
+                foreach (var item in _masa.siparislist)
+                {
+                    listBox1.Items.Add(item);
+                }
+
+
+
+
+                //_siparis._icecekadi = comboicecek.SelectedItem.ToString();
+                //_siparis.icecekList.Add(_siparis);
+
+                //foreach (var item in _siparis.icecekList)
+                //{
+                //    listBox1.Items.Add(item);
+
+                //}
             }
+            catch (Exception)
+            {
+
+               
+            }            
+            
+          
 
         }
     }
