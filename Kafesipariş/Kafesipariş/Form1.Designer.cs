@@ -38,15 +38,17 @@
             this.btnöde = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.numericUpDownicecek = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownyemek = new System.Windows.Forms.NumericUpDown();
             this.comboicecek = new System.Windows.Forms.ComboBox();
             this.comboyemek = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDownyemek = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownicecek = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            this.labelmasa = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownyemek)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownicecek)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownyemek)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -137,6 +139,7 @@
             this.btnöde.TabIndex = 11;
             this.btnöde.Text = "ÖDE";
             this.btnöde.UseVisualStyleBackColor = true;
+            this.btnöde.Click += new System.EventHandler(this.btnöde_Click);
             // 
             // listBox1
             // 
@@ -165,6 +168,22 @@
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Menü";
+            // 
+            // numericUpDownicecek
+            // 
+            this.numericUpDownicecek.Location = new System.Drawing.Point(288, 85);
+            this.numericUpDownicecek.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDownicecek.Name = "numericUpDownicecek";
+            this.numericUpDownicecek.Size = new System.Drawing.Size(132, 26);
+            this.numericUpDownicecek.TabIndex = 7;
+            // 
+            // numericUpDownyemek
+            // 
+            this.numericUpDownyemek.Location = new System.Drawing.Point(288, 40);
+            this.numericUpDownyemek.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDownyemek.Name = "numericUpDownyemek";
+            this.numericUpDownyemek.Size = new System.Drawing.Size(132, 26);
+            this.numericUpDownyemek.TabIndex = 6;
             // 
             // comboicecek
             // 
@@ -204,27 +223,33 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Yemek:";
             // 
-            // numericUpDownyemek
+            // label5
             // 
-            this.numericUpDownyemek.Location = new System.Drawing.Point(288, 40);
-            this.numericUpDownyemek.Margin = new System.Windows.Forms.Padding(4);
-            this.numericUpDownyemek.Name = "numericUpDownyemek";
-            this.numericUpDownyemek.Size = new System.Drawing.Size(132, 26);
-            this.numericUpDownyemek.TabIndex = 6;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(455, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 20);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "Masa no:";
             // 
-            // numericUpDownicecek
+            // labelmasa
             // 
-            this.numericUpDownicecek.Location = new System.Drawing.Point(288, 85);
-            this.numericUpDownicecek.Margin = new System.Windows.Forms.Padding(4);
-            this.numericUpDownicecek.Name = "numericUpDownicecek";
-            this.numericUpDownicecek.Size = new System.Drawing.Size(132, 26);
-            this.numericUpDownicecek.TabIndex = 7;
+            this.labelmasa.AutoSize = true;
+            this.labelmasa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelmasa.Location = new System.Drawing.Point(560, 9);
+            this.labelmasa.Name = "labelmasa";
+            this.labelmasa.Size = new System.Drawing.Size(0, 20);
+            this.labelmasa.TabIndex = 22;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(781, 497);
+            this.Controls.Add(this.labelmasa);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -240,8 +265,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownyemek)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownicecek)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownyemek)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,6 +290,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown numericUpDownyemek;
         private System.Windows.Forms.NumericUpDown numericUpDownicecek;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelmasa;
     }
 }
 

@@ -18,8 +18,8 @@ namespace Kafesipariş
         }
         masa _masa = new masa();
         siparis _siparis = new siparis();
-
-        private void groupBox1_Enter(object sender, EventArgs e)
+        
+    private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
@@ -63,68 +63,50 @@ namespace Kafesipariş
 
 
             Button masa = sender as Button;
-            //_masa.masano =Convert.ToInt32( masa.Text);
-            //labelmasano.Text =_masa.masano.ToString();
-
-        }
+            _masa.masano = int.Parse(masa.Text);
+            labelmasa.Text = _masa.masano.ToString();
+           }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
-            siparis _siparis = new siparis();
-            masa _masa = new masa();
+            
             if (comboyemek.SelectedItem != null && numericUpDownyemek.Value != 0)
             {
                 _siparis._yemekadi = comboyemek.SelectedItem.ToString();
                 _siparis.yemekadet = int.Parse(numericUpDownyemek.Value.ToString());
-                  if (comboicecek.SelectedItem != null && numericUpDownicecek.Value != 0)
+                int yemekadet = _siparis.yemekadet;
+
+                if (comboicecek.SelectedItem != null && numericUpDownicecek.Value != 0)
                 {
-                 _siparis._icecekadi = comboicecek.SelectedItem.ToString();
+                    _siparis._icecekadi = comboicecek.SelectedItem.ToString();
                     _siparis.icecekadet = int.Parse(numericUpDownicecek.Value.ToString());
+                    int siparisadet = _siparis.icecekadet;
+
+
                     _masa.siparislist.Add(_siparis);
 
-                }
-                foreach (var item in _masa.siparislist)
-                {
-                    listBox1.Items.Add(item.yemekadet+" " +item.yemekadi);
-                    listBox1.Items.Add(item.icecekadet+" "+item._icecekadi);
+
+
+
+                    foreach (var item in _masa.siparislist)
+                    {
+                        listBox1.Items.Add(item.yemekadet + " " + "adet" + " " + item.yemekadi);
+                        listBox1.Items.Add(item.icecekadet + " " + "adet" + " " + item._icecekadi);
+                        listBox1.Items.Add(_siparis.hesapla(yemekadet,siparisadet));
+                    }
                 }
             }
+            
+        }
 
-            //try
-            //{
-            //     _siparis._yemekadi = comboyemek.SelectedItem.ToString();
-
-            //    _siparis.yemekList.Add(_siparis);
-
-
-            //    foreach (var item in _siparis.yemekList)
-            //    {
-
-            //        listBox1.Items.Add(item);
-            //        comboyemek.ResetText();
-
-
-            //    }
-            //    _siparis._icecekadi = comboicecek.SelectedItem.ToString();
-            //    _siparis.icecekList.Add(_siparis);
-
-            //    foreach (var a in _siparis.icecekList)
-            //    {
-            //        listBox1.Items.Add(a);
-
-            //    }
-            //}
-            //catch (Exception)
-            //{
-
-
-            //}
-
-
-
+        private void btnöde_Click(object sender, EventArgs e)
+        {
+            
 
         }
-    }
+
 }
+    }
+
 

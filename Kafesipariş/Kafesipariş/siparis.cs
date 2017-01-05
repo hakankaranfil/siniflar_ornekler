@@ -10,9 +10,10 @@ namespace Kafesipariş
     {
         //public List<siparis> yemekList = new List<siparis>();
         //public List<siparis> icecekList = new List<siparis>();
-        public int ucret { get; set; }
+        public int yemekucret { get; set; }
         public int yemekadet { get; set; }
         public int icecekadet { get; set; }
+        public int icecekücret { get; set; }
 
         public string _yemekadi;
         public string yemekadi
@@ -25,26 +26,26 @@ namespace Kafesipariş
             {
                 if (value == "Kuru Fasulye")
                 {
-                    ucret = 5;
+                    yemekucret = 5;
 
                 }
                 else if (value == "Tavuklu Pilav")
                 {
-                    ucret = 6;
+                   yemekucret = 6;
 
 
 
                 }
                 else if (value == "simit+tost")
                 {
-                    ucret = 4;
+                    yemekucret = 4;
 
 
 
                 }
                 else if (value == "lazanya")
                 {
-                    ucret = 2;
+                    yemekucret = 2;
 
 
 
@@ -62,38 +63,44 @@ namespace Kafesipariş
             {
                 if (value == "su")
                 {
-                    ucret = 1;
+                    icecekücret = 1;
 
                 }
                 else if (value == "Kola")
                 {
-                    ucret = 2;
+                  icecekücret = 2;
 
 
 
                 }
                 else if (value == "limonata")
                 {
-                    ucret = 3;
+                    icecekücret= 3;
 
 
 
                 }
                 else if (value == "çay")
                 {
-                    ucret = 2;
+                   icecekücret = 2;
 
 
 
                 }
             }
         }
+                public int hesapla(int yemekadet,int icecekadet)
+        {
+            int sonuc =  (yemekadet*yemekucret)+(icecekadet*icecekücret);
+            return sonuc;
+        }
+            }
+        }
 
         //public override string ToString()
         //{
-        //    return"yemek adeti:"+ this.yemekadet+" "+ this._yemekadi+ "içeçek adeti:"+this.icecekadet+   this._icecekadi;
+        //    return "yemek adeti:" + this.yemekadet + " " + this._yemekadi + "içeçek adeti:" + this.icecekadet + this._icecekadi;
         //}
-       
 
 
 
@@ -103,12 +110,13 @@ namespace Kafesipariş
 
 
 
-    }
+
+    
 
 
 
 
-}
+
        
        
     
