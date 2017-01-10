@@ -12,6 +12,12 @@ namespace Spor_salonu
         public int kayıtno { get; set; }
         public string telno { get; set; }
         public string tckimlik { get; set; }
+        public string sure { get; set; }
+        public int ucret { get; set; }
+        public override string ToString()
+        {
+            return "kayıt no=" + this.kayıtno + " " + "Adsoyad=" + this.adsoyad;
+        }
 
     }
 }

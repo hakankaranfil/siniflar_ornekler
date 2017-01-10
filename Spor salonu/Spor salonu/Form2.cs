@@ -12,9 +12,16 @@ namespace Spor_salonu
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        public Form2(musteri gelenmusteri)
         {
             InitializeComponent();
+            txtkayıtno.Text = gelenmusteri.kayıtno.ToString();
+            txtadsoyad.Text = gelenmusteri.adsoyad;
+            txttc.Text = gelenmusteri.tckimlik;
+            txttel.Text = gelenmusteri.telno;
+            txtsure.Text = gelenmusteri.sure;
+            txtucret.Text = gelenmusteri.ucret.ToString();
+
         }
     }
 }
