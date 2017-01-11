@@ -154,11 +154,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(136, 338);
+            this.button1.Image = global::Spor_salonu.Properties.Resources.circle_back_arrow_glyph_128;
+            this.button1.Location = new System.Drawing.Point(49, 327);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 43);
+            this.button1.Size = new System.Drawing.Size(112, 66);
             this.button1.TabIndex = 19;
-            this.button1.Text = "GERİ";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 

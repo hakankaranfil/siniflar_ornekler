@@ -80,7 +80,7 @@ namespace Spor_salonu
             }
             else
             {
-                
+                MessageBox.Show("Zaten böle bir kayıt mevcut!!!");
             }
          
 
