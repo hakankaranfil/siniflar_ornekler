@@ -16,8 +16,13 @@ namespace Spor_salonu
         {
             InitializeComponent();
         }
+        public Form1(musteri gelenmusteri)
+        {
+            InitializeComponent();
+        }
         musteri _musteri = new musteri();
-        int kayıt = 1;
+       
+       static List<musteri> abonekontrol = new List<musteri>();
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -37,7 +42,7 @@ namespace Spor_salonu
             _musteri.adsoyad = txtadsoyad.Text;
             _musteri.tckimlik = txttc.Text;
             _musteri.telno = txttel.Text;
-            _musteri.kayıtno = kayıt;
+            _musteri.kayıtno =int.Parse( txtkayıtno.Text);
             int i = dataGridView1.Rows.Add();
             if (comboBox1.SelectedItem.ToString() == "1")
             {
@@ -65,20 +70,34 @@ namespace Spor_salonu
                 _musteri.ucret = 850;
             }
 
+          
+            var result = abonekontrol.FirstOrDefault(x => x.kayıtno == _musteri.kayıtno);
+            if (result==null)
+            {
+                abonekontrol.Add(_musteri);
+                listBox1.Items.Add(_musteri);
+                
+            }
+            else
+            {
+                
+            }
+         
+
+            //dataGridView1.Rows[i].Cells[0].Value = _musteri.kayıtno;
+            //dataGridView1.Rows[i].Cells[1].Value = _musteri.adsoyad;
+            //dataGridView1.Rows[i].Cells[2].Value = _musteri.tckimlik;
+            //dataGridView1.Rows[i].Cells[3].Value = _musteri.telno;
 
 
-            dataGridView1.Rows[i].Cells[0].Value = _musteri.kayıtno;
-            dataGridView1.Rows[i].Cells[1].Value = _musteri.adsoyad;
-            dataGridView1.Rows[i].Cells[2].Value = _musteri.tckimlik;
-            dataGridView1.Rows[i].Cells[3].Value = _musteri.telno;
-
-            kayıt++;
-            listBox1.Items.Add(_musteri);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            txtkayıtno.Text = kayıt.ToString();
+            foreach (var item in abonekontrol)
+            {
+                listBox1.Items.Add(item);
+            }
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
@@ -91,6 +110,7 @@ namespace Spor_salonu
             musteri _musteri = (musteri)listBox1.SelectedItem;
             Form2 frm2 = new Form2(_musteri);
             frm2.Show();
+            this.Hide();
         }
     }
 }

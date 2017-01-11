@@ -12,6 +12,7 @@ namespace Spor_salonu
 {
     public partial class Form2 : Form
     {
+        musteri _frm2musteri = new musteri();
         public Form2(musteri gelenmusteri)
         {
             InitializeComponent();
@@ -21,7 +22,16 @@ namespace Spor_salonu
             txttel.Text = gelenmusteri.telno;
             txtsure.Text = gelenmusteri.sure;
             txtucret.Text = gelenmusteri.ucret.ToString();
+            _frm2musteri = gelenmusteri;
+            
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 frm = new Form1(_frm2musteri);
+            frm.Show();
+            this.Hide();
         }
     }
 }
