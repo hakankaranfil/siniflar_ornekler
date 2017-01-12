@@ -43,7 +43,7 @@ namespace Spor_salonu
             _musteri.tckimlik = txttc.Text;
             _musteri.telno = txttel.Text;
             _musteri.kayıtno =int.Parse( txtkayıtno.Text);
-            int i = dataGridView1.Rows.Add();
+           
             if (comboBox1.SelectedItem.ToString() == "1")
             {
                 _musteri.sure = "1";
