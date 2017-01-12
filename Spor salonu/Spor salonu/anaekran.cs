@@ -10,30 +10,19 @@ using System.Windows.Forms;
 
 namespace Spor_salonu
 {
-    public partial class Form1 : Form
+    public partial class anaekran : Form
     {
-        public Form1()
+        public anaekran()
         {
             InitializeComponent();
         }
-        public Form1(musteri gelenmusteri)
+        public anaekran(musteri gelenmusteri)
         {
             InitializeComponent();
         }
         musteri _musteri = new musteri();
        
        static List<musteri> abonekontrol = new List<musteri>();
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-           
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-           
-            
-        }
 
         private void btnekle_Click(object sender, EventArgs e)
         {
@@ -75,41 +64,34 @@ namespace Spor_salonu
             if (result==null)
             {
                 abonekontrol.Add(_musteri);
-                listBox1.Items.Add(_musteri);
-                
+                MessageBox.Show("KAYDINIZ ALINMIŞTIR");
             }
             else
             {
                 MessageBox.Show("Zaten böle bir kayıt mevcut!!!");
             }
-         
-
-            //dataGridView1.Rows[i].Cells[0].Value = _musteri.kayıtno;
-            //dataGridView1.Rows[i].Cells[1].Value = _musteri.adsoyad;
-            //dataGridView1.Rows[i].Cells[2].Value = _musteri.tckimlik;
-            //dataGridView1.Rows[i].Cells[3].Value = _musteri.telno;
-
-
+            
+        }
+            private void button1_Click_1(object sender, EventArgs e)
+        {
+            label1.Visible = true;
+            label2.Visible = true;
+            label3.Visible = true;
+            label4.Visible = true;
+            txtadsoyad.Visible = true;
+            txtkayıtno.Visible = true;
+            txttc.Visible = true;
+            txttel.Visible = true;
+            btnekle.Visible = true;
+            comboBox1.Visible = true;
+            labelsure.Visible = true;
+           
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void bTNLİSTE_Click(object sender, EventArgs e)
         {
-            foreach (var item in abonekontrol)
-            {
-                listBox1.Items.Add(item);
-            }
-        }
-
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-          
-        }
-
-        private void listBox1_DoubleClick(object sender, EventArgs e)
-        {
-            musteri _musteri = (musteri)listBox1.SelectedItem;
-            Form2 frm2 = new Form2(_musteri);
-            frm2.Show();
+            kayıt_listesi frmkayıt = new kayıt_listesi(_musteri);
+            frmkayıt.Show();
             this.Hide();
         }
     }

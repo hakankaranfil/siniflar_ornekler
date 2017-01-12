@@ -1,6 +1,6 @@
 ﻿namespace Spor_salonu
 {
-    partial class Form1
+    partial class anaekran
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(anaekran));
             this.label1 = new System.Windows.Forms.Label();
             this.txtkayıtno = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,9 +38,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txttel = new System.Windows.Forms.TextBox();
             this.btnekle = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.l = new System.Windows.Forms.Label();
+            this.labelsure = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.bTNLİSTE = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -48,94 +49,92 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(12, 39);
+            this.label1.Location = new System.Drawing.Point(269, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Kayıt no:";
+            this.label1.Visible = false;
             // 
             // txtkayıtno
             // 
-            this.txtkayıtno.Location = new System.Drawing.Point(93, 39);
+            this.txtkayıtno.Location = new System.Drawing.Point(350, 16);
             this.txtkayıtno.Name = "txtkayıtno";
             this.txtkayıtno.Size = new System.Drawing.Size(137, 22);
             this.txtkayıtno.TabIndex = 1;
+            this.txtkayıtno.Visible = false;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(12, 88);
+            this.label2.Location = new System.Drawing.Point(269, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Ad soyad:";
+            this.label2.Visible = false;
             // 
             // txtadsoyad
             // 
-            this.txtadsoyad.Location = new System.Drawing.Point(93, 86);
+            this.txtadsoyad.Location = new System.Drawing.Point(350, 63);
             this.txtadsoyad.Name = "txtadsoyad";
             this.txtadsoyad.Size = new System.Drawing.Size(137, 22);
             this.txtadsoyad.TabIndex = 3;
+            this.txtadsoyad.Visible = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(0, 130);
+            this.label3.Location = new System.Drawing.Point(257, 107);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "TC KİMLİK:";
+            this.label3.Visible = false;
             // 
             // txttc
             // 
-            this.txttc.Location = new System.Drawing.Point(93, 128);
+            this.txttc.Location = new System.Drawing.Point(350, 105);
             this.txttc.Name = "txttc";
             this.txttc.Size = new System.Drawing.Size(137, 22);
             this.txttc.TabIndex = 5;
+            this.txttc.Visible = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(12, 177);
+            this.label4.Location = new System.Drawing.Point(269, 154);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 20);
             this.label4.TabIndex = 6;
             this.label4.Text = "Tel:";
+            this.label4.Visible = false;
             // 
             // txttel
             // 
-            this.txttel.Location = new System.Drawing.Point(93, 175);
+            this.txttel.Location = new System.Drawing.Point(350, 152);
             this.txttel.Name = "txttel";
             this.txttel.Size = new System.Drawing.Size(137, 22);
             this.txttel.TabIndex = 7;
+            this.txttel.Visible = false;
             // 
             // btnekle
             // 
             this.btnekle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnekle.BackgroundImage")));
             this.btnekle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnekle.Location = new System.Drawing.Point(434, 39);
+            this.btnekle.Location = new System.Drawing.Point(534, 40);
             this.btnekle.Name = "btnekle";
             this.btnekle.Size = new System.Drawing.Size(112, 87);
             this.btnekle.TabIndex = 8;
             this.btnekle.UseVisualStyleBackColor = true;
+            this.btnekle.Visible = false;
             this.btnekle.Click += new System.EventHandler(this.btnekle_Click);
-            // 
-            // listBox1
-            // 
-            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 22;
-            this.listBox1.Location = new System.Drawing.Point(4, 330);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(554, 114);
-            this.listBox1.TabIndex = 10;
-            this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
             // 
             // comboBox1
             // 
@@ -146,31 +145,54 @@
             "6",
             "9",
             "12"});
-            this.comboBox1.Location = new System.Drawing.Point(93, 229);
+            this.comboBox1.Location = new System.Drawing.Point(350, 206);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(137, 24);
             this.comboBox1.TabIndex = 11;
+            this.comboBox1.Visible = false;
             // 
-            // l
+            // labelsure
             // 
-            this.l.AutoSize = true;
-            this.l.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.l.ForeColor = System.Drawing.Color.Red;
-            this.l.Location = new System.Drawing.Point(12, 233);
-            this.l.Name = "l";
-            this.l.Size = new System.Drawing.Size(49, 20);
-            this.l.TabIndex = 12;
-            this.l.Text = "Süre:";
+            this.labelsure.AutoSize = true;
+            this.labelsure.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelsure.ForeColor = System.Drawing.Color.Red;
+            this.labelsure.Location = new System.Drawing.Point(269, 210);
+            this.labelsure.Name = "labelsure";
+            this.labelsure.Size = new System.Drawing.Size(49, 20);
+            this.labelsure.TabIndex = 12;
+            this.labelsure.Text = "Süre:";
+            this.labelsure.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(4, 16);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(221, 57);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "YENİ KAYIT EKLE";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // bTNLİSTE
+            // 
+            this.bTNLİSTE.Location = new System.Drawing.Point(4, 90);
+            this.bTNLİSTE.Name = "bTNLİSTE";
+            this.bTNLİSTE.Size = new System.Drawing.Size(221, 57);
+            this.bTNLİSTE.TabIndex = 14;
+            this.bTNLİSTE.Text = "KAYIT LİSTESİ";
+            this.bTNLİSTE.UseVisualStyleBackColor = true;
+            this.bTNLİSTE.Click += new System.EventHandler(this.bTNLİSTE_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1154, 634);
-            this.Controls.Add(this.l);
+            this.ClientSize = new System.Drawing.Size(949, 634);
+            this.Controls.Add(this.bTNLİSTE);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.labelsure);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnekle);
             this.Controls.Add(this.txttel);
             this.Controls.Add(this.label4);
@@ -183,7 +205,7 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Form1";
             this.Text = "YAVUZ SPOR";
-            this.Load += new System.EventHandler(this.Form1_Load);
+           
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -200,9 +222,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txttel;
         private System.Windows.Forms.Button btnekle;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label l;
+        private System.Windows.Forms.Label labelsure;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bTNLİSTE;
     }
 }
 

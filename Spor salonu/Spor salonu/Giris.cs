@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Spor_salonu
 {
-    public partial class Form3 : Form
+    public partial class Giris : Form
     {
-        public Form3()
+        public Giris()
         {
             InitializeComponent();
         }
@@ -21,10 +21,14 @@ namespace Spor_salonu
         {
             if (textBox1.Text=="admin"&&textBox2.Text=="1234")
             {
-                Form1 frm = new Form1();
+                anaekran frm = new anaekran();
                 frm.Show();
                 this.Hide();
                 
+            }
+            else
+            {
+                MessageBox.Show("hatalı kullanıcı adı veya şifre girdiniz!!!");
             }
         }
     }

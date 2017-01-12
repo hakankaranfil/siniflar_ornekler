@@ -29,7 +29,7 @@ namespace Spor_salonu
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 frm = new Form1(_frm2musteri);
+            anaekran frm = new anaekran(_frm2musteri);
             frm.Show();
             this.Hide();
         }
