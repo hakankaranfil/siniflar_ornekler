@@ -42,6 +42,7 @@
             this.labelsure = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.bTNLİSTE = new System.Windows.Forms.Button();
+            this.labelbaslık = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -49,7 +50,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(269, 16);
+            this.label1.Location = new System.Drawing.Point(265, 177);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 20);
             this.label1.TabIndex = 0;
@@ -58,7 +59,7 @@
             // 
             // txtkayıtno
             // 
-            this.txtkayıtno.Location = new System.Drawing.Point(350, 16);
+            this.txtkayıtno.Location = new System.Drawing.Point(346, 177);
             this.txtkayıtno.Name = "txtkayıtno";
             this.txtkayıtno.Size = new System.Drawing.Size(137, 22);
             this.txtkayıtno.TabIndex = 1;
@@ -69,7 +70,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(269, 65);
+            this.label2.Location = new System.Drawing.Point(265, 226);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 20);
             this.label2.TabIndex = 2;
@@ -78,7 +79,7 @@
             // 
             // txtadsoyad
             // 
-            this.txtadsoyad.Location = new System.Drawing.Point(350, 63);
+            this.txtadsoyad.Location = new System.Drawing.Point(346, 224);
             this.txtadsoyad.Name = "txtadsoyad";
             this.txtadsoyad.Size = new System.Drawing.Size(137, 22);
             this.txtadsoyad.TabIndex = 3;
@@ -89,7 +90,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(257, 107);
+            this.label3.Location = new System.Drawing.Point(253, 268);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 20);
             this.label3.TabIndex = 4;
@@ -98,7 +99,7 @@
             // 
             // txttc
             // 
-            this.txttc.Location = new System.Drawing.Point(350, 105);
+            this.txttc.Location = new System.Drawing.Point(346, 266);
             this.txttc.Name = "txttc";
             this.txttc.Size = new System.Drawing.Size(137, 22);
             this.txttc.TabIndex = 5;
@@ -109,7 +110,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(269, 154);
+            this.label4.Location = new System.Drawing.Point(265, 315);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 20);
             this.label4.TabIndex = 6;
@@ -118,7 +119,7 @@
             // 
             // txttel
             // 
-            this.txttel.Location = new System.Drawing.Point(350, 152);
+            this.txttel.Location = new System.Drawing.Point(346, 313);
             this.txttel.Name = "txttel";
             this.txttel.Size = new System.Drawing.Size(137, 22);
             this.txttel.TabIndex = 7;
@@ -128,7 +129,7 @@
             // 
             this.btnekle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnekle.BackgroundImage")));
             this.btnekle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnekle.Location = new System.Drawing.Point(534, 40);
+            this.btnekle.Location = new System.Drawing.Point(567, 236);
             this.btnekle.Name = "btnekle";
             this.btnekle.Size = new System.Drawing.Size(112, 87);
             this.btnekle.TabIndex = 8;
@@ -145,7 +146,7 @@
             "6",
             "9",
             "12"});
-            this.comboBox1.Location = new System.Drawing.Point(350, 206);
+            this.comboBox1.Location = new System.Drawing.Point(346, 371);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(137, 24);
             this.comboBox1.TabIndex = 11;
@@ -156,7 +157,7 @@
             this.labelsure.AutoSize = true;
             this.labelsure.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelsure.ForeColor = System.Drawing.Color.Red;
-            this.labelsure.Location = new System.Drawing.Point(269, 210);
+            this.labelsure.Location = new System.Drawing.Point(265, 371);
             this.labelsure.Name = "labelsure";
             this.labelsure.Size = new System.Drawing.Size(49, 20);
             this.labelsure.TabIndex = 12;
@@ -183,12 +184,23 @@
             this.bTNLİSTE.UseVisualStyleBackColor = true;
             this.bTNLİSTE.Click += new System.EventHandler(this.bTNLİSTE_Click);
             // 
-            // Form1
+            // labelbaslık
+            // 
+            this.labelbaslık.AutoSize = true;
+            this.labelbaslık.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelbaslık.Location = new System.Drawing.Point(295, 18);
+            this.labelbaslık.Name = "labelbaslık";
+            this.labelbaslık.Size = new System.Drawing.Size(435, 39);
+            this.labelbaslık.TabIndex = 15;
+            this.labelbaslık.Text = "YAVUZSPOR KOMPLEKSİ";
+            // 
+            // anaekran
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(949, 634);
+            this.Controls.Add(this.labelbaslık);
             this.Controls.Add(this.bTNLİSTE);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.labelsure);
@@ -203,9 +215,8 @@
             this.Controls.Add(this.txtkayıtno);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.Black;
-            this.Name = "Form1";
+            this.Name = "anaekran";
             this.Text = "YAVUZ SPOR";
-           
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,6 +237,7 @@
         private System.Windows.Forms.Label labelsure;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button bTNLİSTE;
+        private System.Windows.Forms.Label labelbaslık;
     }
 }
 

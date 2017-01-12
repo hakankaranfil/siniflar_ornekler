@@ -33,5 +33,10 @@ namespace Spor_salonu
             frm.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
