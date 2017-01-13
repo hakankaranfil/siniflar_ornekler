@@ -32,11 +32,14 @@ namespace Spor_salonu
             anaekran frm = new anaekran(_frm2musteri);
             frm.Show();
             this.Hide();
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            kayıt_listesi kayıt = new kayıt_listesi(_frm2musteri);
+            kayıt.Show();
+            this.Hide();
         }
     }
 }
