@@ -99,5 +99,12 @@ namespace Spor_salonu
         {
             
         }
+
+        private void btncikis_Click(object sender, EventArgs e)
+        {
+            Giris frmgiris = new Giris();
+            frmgiris.Show();
+            this.Hide();
+        }
     }
 }

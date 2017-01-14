@@ -44,6 +44,7 @@
             this.bTNLİSTE = new System.Windows.Forms.Button();
             this.labelbaslık = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.btncikis = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -51,7 +52,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(306, 68);
+            this.label1.Location = new System.Drawing.Point(298, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 20);
             this.label1.TabIndex = 0;
@@ -60,7 +61,7 @@
             // 
             // txtkayıtno
             // 
-            this.txtkayıtno.Location = new System.Drawing.Point(387, 68);
+            this.txtkayıtno.Location = new System.Drawing.Point(420, 68);
             this.txtkayıtno.Name = "txtkayıtno";
             this.txtkayıtno.Size = new System.Drawing.Size(137, 22);
             this.txtkayıtno.TabIndex = 1;
@@ -71,7 +72,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(306, 117);
+            this.label2.Location = new System.Drawing.Point(298, 117);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 20);
             this.label2.TabIndex = 2;
@@ -80,7 +81,7 @@
             // 
             // txtadsoyad
             // 
-            this.txtadsoyad.Location = new System.Drawing.Point(387, 115);
+            this.txtadsoyad.Location = new System.Drawing.Point(420, 115);
             this.txtadsoyad.Name = "txtadsoyad";
             this.txtadsoyad.Size = new System.Drawing.Size(137, 22);
             this.txtadsoyad.TabIndex = 3;
@@ -100,7 +101,7 @@
             // 
             // txttc
             // 
-            this.txttc.Location = new System.Drawing.Point(387, 157);
+            this.txttc.Location = new System.Drawing.Point(420, 159);
             this.txttc.Name = "txttc";
             this.txttc.Size = new System.Drawing.Size(137, 22);
             this.txttc.TabIndex = 5;
@@ -120,7 +121,7 @@
             // 
             // txttel
             // 
-            this.txttel.Location = new System.Drawing.Point(387, 204);
+            this.txttel.Location = new System.Drawing.Point(420, 204);
             this.txttel.Name = "txttel";
             this.txttel.Size = new System.Drawing.Size(137, 22);
             this.txttel.TabIndex = 7;
@@ -130,7 +131,7 @@
             // 
             this.btnekle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnekle.BackgroundImage")));
             this.btnekle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnekle.Location = new System.Drawing.Point(567, 236);
+            this.btnekle.Location = new System.Drawing.Point(597, 68);
             this.btnekle.Name = "btnekle";
             this.btnekle.Size = new System.Drawing.Size(112, 87);
             this.btnekle.TabIndex = 8;
@@ -147,7 +148,7 @@
             "6",
             "9",
             "12"});
-            this.comboBox1.Location = new System.Drawing.Point(387, 262);
+            this.comboBox1.Location = new System.Drawing.Point(420, 258);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(137, 24);
             this.comboBox1.TabIndex = 11;
@@ -205,12 +206,23 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // btncikis
+            // 
+            this.btncikis.Location = new System.Drawing.Point(4, 279);
+            this.btncikis.Name = "btncikis";
+            this.btncikis.Size = new System.Drawing.Size(221, 57);
+            this.btncikis.TabIndex = 17;
+            this.btncikis.Text = "ÇIKIŞ";
+            this.btncikis.UseVisualStyleBackColor = true;
+            this.btncikis.Click += new System.EventHandler(this.btncikis_Click);
+            // 
             // anaekran
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(949, 634);
+            this.Controls.Add(this.btncikis);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.labelbaslık);
             this.Controls.Add(this.bTNLİSTE);
@@ -251,6 +263,7 @@
         private System.Windows.Forms.Button bTNLİSTE;
         private System.Windows.Forms.Label labelbaslık;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btncikis;
     }
 }
 
