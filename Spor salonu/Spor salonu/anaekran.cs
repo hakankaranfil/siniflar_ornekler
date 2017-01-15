@@ -37,6 +37,7 @@ namespace Spor_salonu
             {
                 _musteri.sure = "1";
                 _musteri.ucret = 100;
+                
             }
          else   if (comboBox1.SelectedItem.ToString() == "3")
             {
@@ -85,6 +86,7 @@ namespace Spor_salonu
             btnekle.Visible = true;
             comboBox1.Visible = true;
             labelsure.Visible = true;
+            txtucret.Visible = true;
            
         }
 
@@ -105,6 +107,25 @@ namespace Spor_salonu
             Giris frmgiris = new Giris();
             frmgiris.Show();
             this.Hide();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedItem.ToString() == "1")
+           
+            {
+                txtucret.Text = "100";
+            }
+        else    if (comboBox1.SelectedItem.ToString() == "3")
+
+            {
+                txtucret.Text = "250";
+            }
+            else if (comboBox1.SelectedItem.ToString() == "6")
+
+            {
+                txtucret.Text = "450";
+            }
         }
     }
 }
