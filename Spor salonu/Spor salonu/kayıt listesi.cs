@@ -27,5 +27,11 @@ namespace Spor_salonu
             frm2.Show();
             this.Hide();
         }
+
+        private void btngeri_Click(object sender, EventArgs e)
+        {
+            anaekran anaekranfrm = new anaekran();
+            anaekranfrm.Show();
+        }
     }
 }
