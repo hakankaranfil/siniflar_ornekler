@@ -11,6 +11,7 @@ namespace OzanSuDagıtım.DbConnection.Model
         public int ProductID  { get; set; }
         public string ProductName { get; set; }
         public Nullable<Double> ProductPrice { get; set; }
+        public double ProductSize { get; set; }
 
     }
 }
