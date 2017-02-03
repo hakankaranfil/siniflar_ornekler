@@ -21,24 +21,25 @@ namespace CodeFirstSimple2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            using(MarketContext context=new MarketContext())
+            using (MarketContext context = new MarketContext())
             {
-                var result = context.Category.ToList();
-                if (result.Count ==0)
+                //var result = context.Category.ToList();
+                //if (result.Count == 0)
                 {
                     context.Category.Add(new Category { Categoryname = "Oyun Konsolu" });
                     context.Category.Add(new Category { Categoryname = "Masaüstü Bilgisayar" });
                     context.SaveChanges();
+                    //}
+                    var result = context.Category.ToList();
+                    foreach (var item in result)
+                    {
+                        CboxUrunKategori.Items.Add(item);
+                    }
                 }
-                result = context.Category.ToList();
-                foreach (var item in result)
-                {
-                    CboxUrunKategori.Items.Add(item);
-                }
-            }
-         
-            groupBox1.Enabled = false;
 
+                groupBox1.Enabled = false;
+
+            }
         }
 
         private void işlemlerToolStripMenuItem_Click(object sender, EventArgs e)
@@ -82,7 +83,10 @@ namespace CodeFirstSimple2
             {
                 context.Product.Add(urun);
                 context.SaveChanges();
+                context.Product.ToList();
             }
+
+            
         }
     }
 }
