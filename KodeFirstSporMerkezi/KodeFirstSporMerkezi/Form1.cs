@@ -65,6 +65,20 @@ namespace KodeFirstSporMerkezi
             {
                 datakayit.DataSource = context.MusBilgi.ToList();
             }
+            btnsil.Visible = true;
+        }
+
+        private void btnsil_Click(object sender, EventArgs e)
+        {
+            using (SporContext context = new SporContext())
+            {
+                int deger = int.Parse(datakayit.Rows[datakayit.CurrentRow.Index].Cells[0].Value.ToString());
+
+                var silinecek = context.MusBilgi.Where(u => u.MusBilgiID == deger).FirstOrDefault();
+                context.MusBilgi.Remove(silinecek);
+                context.SaveChanges();
+                datakayit.DataSource = context.MusBilgi.ToList();
+            }
         }
 
         private void cmbsure_SelectedIndexChanged(object sender, EventArgs e)
