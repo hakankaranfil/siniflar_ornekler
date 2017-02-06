@@ -23,14 +23,14 @@ namespace CodeFirstSimple2
         {
             using (MarketContext context = new MarketContext())
             {
-                //var result = context.Category.ToList();
-                //if (result.Count == 0)
+                var result = context.Category.ToList();
+                if (result.Count == 0)
                 {
                     context.Category.Add(new Category { Categoryname = "Oyun Konsolu" });
                     context.Category.Add(new Category { Categoryname = "Masaüstü Bilgisayar" });
                     context.SaveChanges();
-                    //}
-                    var result = context.Category.ToList();
+                }
+                result = context.Category.ToList();
                     foreach (var item in result)
                     {
                         CboxUrunKategori.Items.Add(item);
@@ -89,4 +89,4 @@ namespace CodeFirstSimple2
             
         }
     }
-}
+
