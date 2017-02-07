@@ -26,6 +26,8 @@ namespace KodeFirstSporMerkezi
             label4.Visible = true;
             label5.Visible = true;
             label6.Visible = true;
+            label7.Visible = true;
+            txtTC.Visible = true;
             txtad.Visible = true;
             txttel.Visible = true;
             txtucret.Visible = true;
@@ -42,11 +44,13 @@ namespace KodeFirstSporMerkezi
         {
             MusBilgi musteri = new MusBilgi();
             musteri.Musadsoyad = txtad.Text;
+            musteri.MusTC = txtTC.Text;
             musteri.Mustel = txttel.Text;
             musteri.Mussure = int.Parse(cmbsure.SelectedItem.ToString());
             musteri.Musucret = int.Parse(txtucret.Text);
             musteri.Muskayit = txtkayıttarih.Text;
             musteri.Musbitis = txtbitistarih.Text;
+            
             using (SporContext context = new SporContext())
             {
 
@@ -78,6 +82,24 @@ namespace KodeFirstSporMerkezi
                 context.MusBilgi.Remove(silinecek);
                 context.SaveChanges();
                 datakayit.DataSource = context.MusBilgi.ToList();
+            }
+        }
+
+        private void txtTC_Leave(object sender, EventArgs e)
+        {
+            using (SporContext context = new SporContext())
+            {
+                int MusTC = int.Parse(txtTC.Text);
+                var result = context.MusBilgi.FirstOrDefault(x => x.MusTC == MusTC.ToString());
+                if (result!=null)
+                {
+                    txtad.Text = result.Musadsoyad;
+                    txtkayıttarih.Text = result.Muskayit;
+                    txtbitistarih.Text = result.Musbitis;
+                    txttel.Text = result.Mustel;
+                    
+                    
+                }
             }
         }
 

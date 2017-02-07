@@ -15,6 +15,7 @@ namespace KodeFirstSporMerkezi.DbContext
         public int Mussure { get; set; }
         public int Musucret { get; set; }
         public string Muskayit { get; set; }
+        public string MusTC { get; set; }
 
         public string Musbitis { get; set; }
     }
