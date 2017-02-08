@@ -37,7 +37,7 @@ namespace IZSU
                 {
                     comboBox1.Items.Add(item);
                 }
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+
             }
         }
 
@@ -54,6 +54,7 @@ namespace IZSU
 
         private void txtAboneNo_Leave(object sender, EventArgs e)
         {
+
             using (IzsuDBContext context = new IzsuDBContext())
             {
                 int AboneNo = int.Parse(txtAboneNo.Text);
@@ -75,7 +76,9 @@ namespace IZSU
                     MessageBox.Show("kullanıcı bulunamadı");
                     btnkaydet.Enabled = true;
                 }
+
             }
+
         }
 
         private void btnkaydet_Click(object sender, EventArgs e)
@@ -95,14 +98,61 @@ namespace IZSU
 
         private void button1_Click(object sender, EventArgs e)
         {
-            foreach (Control ctr  in groupAboneBilgi.Controls)
+            foreach (Control ctr in groupAboneBilgi.Controls)
             {
                 if (ctr is TextBox)
                 {
                     ctr.Text = "";
                 }
-             
+
             }
+        }
+
+        private void btnekle_Click(object sender, EventArgs e)
+        {
+            int _aboneno=int.Parse(txtAboneNo.Text);
+            Fatura f = new Fatura();
+          
+            f.FaturaTarihi = tarih.Value;
+            f.GuncelSayac = int.Parse(txtguncel.Text);
+            f.OncekiSayac = int.Parse(txtönceki.Text);
+            using (IzsuDBContext context = new IzsuDBContext())
+            {
+                int aboneID = context.Abone.FirstOrDefault(a => a.AboneNo == _aboneno).AboneTuruId;
+                context.Fatura.Add(f);
+                context.SaveChanges();
+            }
+        }
+
+        private void btngetir_Click(object sender, EventArgs e)
+        {
+            int  _aboneno = int.Parse(txtAboneNo.Text);
+
+            using (IzsuDBContext context = new IzsuDBContext())
+            {
+                int aboneID = context.Abone.FirstOrDefault(a => a.AboneNo == _aboneno).AboneTuruId;
+
+                dataBilgi.DataSource = context.Fatura.Where(f => f.AboneID == _aboneno).Select(f => new
+                {
+                    faturaıd = f.FaturaID,
+
+                }).ToList();
+
+
+              
+                   
+                
+
+
+
+
+
+                    
+                   
+
+
+
+                    }
         }
     }
 }
