@@ -41,6 +41,7 @@
             this.txtKayıtYap = new System.Windows.Forms.TextBox();
             this.tarih = new System.Windows.Forms.DateTimePicker();
             this.btnKaydet = new System.Windows.Forms.Button();
+            this.btnGetir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -116,6 +117,7 @@
             this.txtStokSeri.Name = "txtStokSeri";
             this.txtStokSeri.Size = new System.Drawing.Size(129, 22);
             this.txtStokSeri.TabIndex = 7;
+            this.txtStokSeri.Leave += new System.EventHandler(this.txtStokSeri_Leave);
             // 
             // cmbStokTur
             // 
@@ -143,12 +145,13 @@
             // 
             this.tarih.Location = new System.Drawing.Point(152, 176);
             this.tarih.Name = "tarih";
-            this.tarih.Size = new System.Drawing.Size(200, 22);
+            this.tarih.Size = new System.Drawing.Size(129, 22);
             this.tarih.TabIndex = 11;
             // 
             // btnKaydet
             // 
             this.btnKaydet.BackColor = System.Drawing.Color.Aqua;
+            this.btnKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKaydet.ForeColor = System.Drawing.Color.Black;
             this.btnKaydet.Location = new System.Drawing.Point(13, 326);
             this.btnKaydet.Name = "btnKaydet";
@@ -158,11 +161,25 @@
             this.btnKaydet.UseVisualStyleBackColor = false;
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
+            // btnGetir
+            // 
+            this.btnGetir.BackColor = System.Drawing.Color.Green;
+            this.btnGetir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGetir.ForeColor = System.Drawing.Color.Black;
+            this.btnGetir.Location = new System.Drawing.Point(150, 326);
+            this.btnGetir.Name = "btnGetir";
+            this.btnGetir.Size = new System.Drawing.Size(131, 63);
+            this.btnGetir.TabIndex = 13;
+            this.btnGetir.Text = "Getir";
+            this.btnGetir.UseVisualStyleBackColor = false;
+            this.btnGetir.Click += new System.EventHandler(this.btnGetir_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(517, 489);
+            this.ClientSize = new System.Drawing.Size(1287, 489);
+            this.Controls.Add(this.btnGetir);
             this.Controls.Add(this.btnKaydet);
             this.Controls.Add(this.tarih);
             this.Controls.Add(this.txtKayıtYap);
@@ -199,6 +216,7 @@
         private System.Windows.Forms.TextBox txtKayıtYap;
         private System.Windows.Forms.DateTimePicker tarih;
         private System.Windows.Forms.Button btnKaydet;
+        private System.Windows.Forms.Button btnGetir;
     }
 }
 

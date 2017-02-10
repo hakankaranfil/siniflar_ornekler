@@ -11,7 +11,7 @@ namespace FrameworkStokTakipProgram.DBLayer.Model
         public int ProductStockID { get; set; }
         public string ProductName { get; set; }
         public int ProductNumber { get; set; }
-        public string ProductSerialNumber { get; set; }
+        public int ProductSerialNumber { get; set; }
         public DateTime ProductDate { get; set; }
         public string Recorder { get; set; }
         public int ProductTypeID{ get; set; }
