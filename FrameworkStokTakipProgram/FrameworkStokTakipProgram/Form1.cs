@@ -56,15 +56,7 @@ namespace FrameworkStokTakipProgram
 
         private void btnGetir_Click(object sender, EventArgs e)
         {
-            //int stokserino =int.Parse( txtStokSeri.Text);
-            //using (StokContext context = new StokContext())
-            //{
-            //    var result = context.ProductSock.FirstOrDefault(ps => ps.ProductSerialNumber == stokserino);
-            //    if (result!=null)
-            //    {
-
-            //    }
-            //}
+        
         }
 
         private void txtStokSeri_Leave(object sender, EventArgs e)
@@ -78,8 +70,22 @@ namespace FrameworkStokTakipProgram
                     txtKayıtYap.Text = result.Recorder;
                     txtStokAdet.Text = result.ProductNumber.ToString();
                     txtStokModel.Text = result.ProductName;
-                   
                     cmbStokTur.SelectedIndex = result.ProductStockID;
+                }
+            }
+        }
+
+        private void btnTemizle_Click(object sender, EventArgs e)
+        {
+            foreach (Control ctr in this.Controls)
+            {
+                if (ctr is TextBox)
+                {
+                    ctr.Text = "";
+                }
+                if (ctr is ComboBox)
+                {
+                    ctr.Text = null;
                 }
             }
         }

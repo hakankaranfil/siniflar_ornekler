@@ -42,13 +42,14 @@
             this.tarih = new System.Windows.Forms.DateTimePicker();
             this.btnKaydet = new System.Windows.Forms.Button();
             this.btnGetir = new System.Windows.Forms.Button();
+            this.btnTemizle = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(12, 36);
+            this.label1.Location = new System.Drawing.Point(14, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 25);
             this.label1.TabIndex = 0;
@@ -106,7 +107,7 @@
             // 
             // txtStokModel
             // 
-            this.txtStokModel.Location = new System.Drawing.Point(152, 38);
+            this.txtStokModel.Location = new System.Drawing.Point(152, 51);
             this.txtStokModel.Name = "txtStokModel";
             this.txtStokModel.Size = new System.Drawing.Size(129, 22);
             this.txtStokModel.TabIndex = 6;
@@ -174,11 +175,25 @@
             this.btnGetir.UseVisualStyleBackColor = false;
             this.btnGetir.Click += new System.EventHandler(this.btnGetir_Click);
             // 
+            // btnTemizle
+            // 
+            this.btnTemizle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnTemizle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnTemizle.ForeColor = System.Drawing.Color.Black;
+            this.btnTemizle.Location = new System.Drawing.Point(95, -1);
+            this.btnTemizle.Name = "btnTemizle";
+            this.btnTemizle.Size = new System.Drawing.Size(93, 34);
+            this.btnTemizle.TabIndex = 14;
+            this.btnTemizle.Text = "Temizle";
+            this.btnTemizle.UseVisualStyleBackColor = false;
+            this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1287, 489);
+            this.Controls.Add(this.btnTemizle);
             this.Controls.Add(this.btnGetir);
             this.Controls.Add(this.btnKaydet);
             this.Controls.Add(this.tarih);
@@ -217,6 +232,7 @@
         private System.Windows.Forms.DateTimePicker tarih;
         private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.Button btnGetir;
+        private System.Windows.Forms.Button btnTemizle;
     }
 }
 
