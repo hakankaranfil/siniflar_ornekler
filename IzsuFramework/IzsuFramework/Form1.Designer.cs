@@ -301,8 +301,9 @@
             this.dataGridView1.Location = new System.Drawing.Point(361, 188);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(530, 388);
+            this.dataGridView1.Size = new System.Drawing.Size(866, 388);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
             // label9
             // 
@@ -324,7 +325,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(903, 589);
+            this.ClientSize = new System.Drawing.Size(1227, 589);
             this.Controls.Add(this.txttoplamborc);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dataGridView1);
