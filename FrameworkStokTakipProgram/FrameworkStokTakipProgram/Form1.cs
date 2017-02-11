@@ -56,7 +56,13 @@ namespace FrameworkStokTakipProgram
 
         private void btnGetir_Click(object sender, EventArgs e)
         {
-        
+            
+            using (StokContext context = new StokContext())
+            {
+
+              
+                
+                    }
         }
 
         private void txtStokSeri_Leave(object sender, EventArgs e)

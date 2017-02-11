@@ -43,6 +43,8 @@
             this.btnKaydet = new System.Windows.Forms.Button();
             this.btnGetir = new System.Windows.Forms.Button();
             this.btnTemizle = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -182,17 +184,28 @@
             this.btnTemizle.ForeColor = System.Drawing.Color.Black;
             this.btnTemizle.Location = new System.Drawing.Point(95, -1);
             this.btnTemizle.Name = "btnTemizle";
-            this.btnTemizle.Size = new System.Drawing.Size(93, 34);
+            this.btnTemizle.Size = new System.Drawing.Size(120, 46);
             this.btnTemizle.TabIndex = 14;
             this.btnTemizle.Text = "Temizle";
             this.btnTemizle.UseVisualStyleBackColor = false;
             this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(287, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(900, 377);
+            this.dataGridView1.TabIndex = 15;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1287, 489);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnTemizle);
             this.Controls.Add(this.btnGetir);
             this.Controls.Add(this.btnKaydet);
@@ -211,6 +224,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,6 +247,7 @@
         private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.Button btnGetir;
         private System.Windows.Forms.Button btnTemizle;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
