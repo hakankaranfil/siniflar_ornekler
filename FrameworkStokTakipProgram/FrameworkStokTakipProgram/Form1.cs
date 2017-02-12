@@ -56,11 +56,33 @@ namespace FrameworkStokTakipProgram
 
         private void btnGetir_Click(object sender, EventArgs e)
         {
-            
+            int serino = int.Parse(txtStokSeri.Text);
             using (StokContext context = new StokContext())
             {
+                var result = context.ProductSock.FirstOrDefault(ps => ps.ProductSerialNumber == serino);
+                if (result!=null)
+                {
+                    dataGridView1.DataSource = context.ProductSock.Where(p => p.ProductSerialNumber == serino) /*&&*/
+                                //(p.ProductDate.Month == tarih.Value.Month &&
+                                /*p.ProductDate.Year == tarih.Value.Year))*/.
+                                Select(p => new
+                                {
+                                    Stokmodeli = p.ProductName,
+                                    Stokadedi=p.ProductNumber,
+                                    Kayityapan=p.Recorder,
+                                    ÜrünTipi=p.ProductType
 
-              
+                                }).ToList();
+                }
+                else
+                {
+                    MessageBox.Show("Girdiğiniz Seri Numarasına Göre Bir Ürün Bulunamadı");
+                }
+                
+                                    
+                                    
+                                
+                               
                 
                     }
         }
