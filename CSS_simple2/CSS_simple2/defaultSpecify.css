@@ -1,0 +1,65 @@
+﻿body {
+    background-image:url('image/5.png');
+    background-size:cover;
+
+}
+#main{
+    padding:10px;
+    width:580px;
+    height:780px;
+    margin:auto;
+    background-color:ActiveCaption;
+}
+#banner{
+    height:75px;
+    background-color:aqua;
+    text-align:center;
+    text-decoration:underline;
+    font-family:'Segoe UI';
+    font-style:normal;
+    padding-top:25px;
+}
+#menu{
+    padding:5px;
+    width:140px;
+    background-color:azure;
+    height:390px;
+    float:left;
+    margin-top:5px;
+}
+.kenar{
+    border-radius:20px 20px 20px 20px ;
+}
+#concent{
+    background-color:ActiveCaption;
+    padding:5px 0px 0px 20px;
+    margin-top:10px;
+    margin-left:180px;
+    height:350px;
+    width:380px;
+}
+#footer{
+    background-color:black;
+    height:250px;
+    width:580px;
+   
+    color:white;
+    float:right;
+    margin-top:10px;
+    text-align:center;
+}
+#concent img{
+    margin:5px;
+    border-radius:20px 20px 20px 20px;
+    opacity:0.4;
+}
+.ForImages{
+    width:150px;
+    height:150px;
+}
+#concent img:hover{
+    opacity:1;
+    width:200px;
+    height:200px;
+    /*resimlerin üzerine gelince netleştirip büyütüyor*/
+}

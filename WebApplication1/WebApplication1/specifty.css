@@ -1,0 +1,24 @@
+﻿body {
+    background-image:url('image/indir (4).jpg')
+    margin:0px;
+    padding-top:0px;
+    background-repeat:no-repeat;
+
+}
+#Karsılama{
+    height:200px;
+    background-color:yellow;
+    font-family:Vivaldi;
+    font-size:20px;
+    opacity:0.6;
+    padding-left:20px;
+    padding-top:3px;
+    padding-bottom:3px;
+}
+.imageSize{
+    width:200px;
+    height:200px;
+}
+#test img{
+    border-radius:25px 25px 25px 25px;
+}
